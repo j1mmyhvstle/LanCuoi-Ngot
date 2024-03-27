@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChuongTrinhQuanLyKyTuXa_Version3
 {
     public partial class Dashboard : Form
-    { 
+    {
         function fn = new function() { };
         public Dashboard()
         {
@@ -25,7 +18,7 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            Login fn = new Login();
+            DanhChoQuanLy fn = new DanhChoQuanLy();
             fn.Show();
             this.Close();
         }

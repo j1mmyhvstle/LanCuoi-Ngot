@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChuongTrinhQuanLyKyTuXa_Version3
@@ -38,7 +33,7 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
             guna2DataGridView1.DataSource = ds.Tables[0];
         }
 
-       private void clearAll()
+        private void clearAll()
         {
             txtMobile.Clear();
             txtName.Clear();
@@ -60,8 +55,14 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                     txtName.Text = ds.Tables[0].Rows[0][0].ToString();
                     txtEmailId.Text = ds.Tables[0].Rows[0][1].ToString();
                     txtRoomNo.Text = ds.Tables[0].Rows[0][2].ToString();
+<<<<<<<< HEAD:chau/StudentFees.cs
                     setDataGrid(Int64.Parse(txtMobile.Text));  
                 } else
+========
+                    setDataGrid(Int64.Parse(txtMobile.Text));
+                }
+                else
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/StudentFees.cs
                 {
                     MessageBox.Show("Hồ sơ này không tồn tại.", "Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -84,7 +85,8 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                     query = "insert into fees values (" + mobile + ", '" + month + "', " + amount + ")";
                     fn.setData(query, "Phí đã trả");
                     clearAll();
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Không có lệ phí của " + dateTimePicker.Text + " Còn lại.", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

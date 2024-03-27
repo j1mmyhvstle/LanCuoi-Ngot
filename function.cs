@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Data;
 
 namespace ChuongTrinhQuanLyKyTuXa_Version3
 {
@@ -14,10 +10,32 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
+<<<<<<<< HEAD:chau/function.cs
             con.ConnectionString = @"Server=THUYENTRUONGRON\VUAVUNGCAO;Database=pcHostel;Trusted_Connection=True;TrustServerCertificate=Yes;MultipleActiveResultSets=true";
             return con;
         }
 
+========
+            con.ConnectionString = @"Server=LAPTOP-H8I33679;Database=QL_KTX;Trusted_Connection=True;TrustServerCertificate=Yes;MultipleActiveResultSets=true";
+            return con;
+        }
+        public void backtochoosen(Form currentForm, Form Choosen)
+        { // Hiển thị hộp thoại thông báo và lấy phản hồi từ người dùng
+            DialogResult result = MessageBox.Show("Bạn có muốn chọn đối tượng sử dụng không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Xử lý phản hồi từ người dùng
+            if (result == DialogResult.Yes)
+            {
+                // Hiển thị màn hình chính và ẩn form hiện tại
+                Choosen.Show();
+                currentForm.Hide();
+            }
+            else
+            {
+                // Không làm gì nếu người dùng chọn "No"
+            }
+        }
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/function.cs
         public void back(Form currentForm, Form Dashboard)
         { // Hiển thị hộp thoại thông báo và lấy phản hồi từ người dùng
             DialogResult result = MessageBox.Show("Bạn có muốn quay lại màn hình chính không?", "Xác nhận quay lại màn hình chính", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -61,7 +79,24 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
             da.Fill(ds);
             return ds;
         }
+<<<<<<<< HEAD:chau/function.cs
         public void setData(String query, String msg)
+========
+
+
+        /*public void setData(String query, String msg)
+        {
+            SqlConnection con = getConnection();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            con.Open();
+            cmd.CommandText = query;
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show(msg, "Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }*/
+        public void setData(String query, String msg, SqlParameter[] sqlParams = null)
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/function.cs
         {
             SqlConnection con = getConnection();
             SqlCommand cmd = new SqlCommand();

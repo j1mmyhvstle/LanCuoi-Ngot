@@ -67,6 +67,12 @@
     <Compile Include="AllStudentLiving.Designer.cs">
       <DependentUpon>AllStudentLiving.cs</DependentUpon>
     </Compile>
+    <Compile Include="Choosen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choosen.Designer.cs">
+      <DependentUpon>Choosen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Danhchosinhvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +97,19 @@
     <Compile Include="EmployeePayment.Designer.cs">
       <DependentUpon>EmployeePayment.cs</DependentUpon>
     </Compile>
+<<<<<<<< HEAD:chau/ChuongTrinhQuanLyKyTuXa_Version3.csproj
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+========
+    <Compile Include="DanhChoQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhChoQuanLy.Designer.cs">
+      <DependentUpon>DanhChoQuanLy.cs</DependentUpon>
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/ChuongTrinhQuanLyKyTuXa_Version3.csproj
     </Compile>
     <Compile Include="function.cs" />
     <Compile Include="LeavedEmployee.cs">
@@ -151,6 +165,9 @@
     <EmbeddedResource Include="AllStudentLiving.resx">
       <DependentUpon>AllStudentLiving.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Choosen.resx">
+      <DependentUpon>Choosen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Danhchosinhvien.resx">
       <DependentUpon>Danhchosinhvien.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,8 +180,13 @@
     <EmbeddedResource Include="EmployeePayment.resx">
       <DependentUpon>EmployeePayment.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<<< HEAD:chau/ChuongTrinhQuanLyKyTuXa_Version3.csproj
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+========
+    <EmbeddedResource Include="DanhChoQuanLy.resx">
+      <DependentUpon>DanhChoQuanLy.cs</DependentUpon>
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/ChuongTrinhQuanLyKyTuXa_Version3.csproj
     </EmbeddedResource>
     <EmbeddedResource Include="LeavedEmployee.resx">
       <DependentUpon>LeavedEmployee.cs</DependentUpon>
@@ -236,6 +258,7 @@
     <None Include="Resources\process-error-icon-1024x1024-qxlzzqvg.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<<< HEAD:chau/ChuongTrinhQuanLyKyTuXa_Version3.csproj
     <None Include="Resources\ktx.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +266,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\inforicon.png" />
+========
+    <None Include="Resources\ky-tuc-xa-truong-dai-hoc-kinh-te-hcm-1 %281%29.jpg" />
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/ChuongTrinhQuanLyKyTuXa_Version3.csproj
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

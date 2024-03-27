@@ -1,24 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChuongTrinhQuanLyKyTuXa_Version3
 {
     public partial class Danhchosinhvien : Form
     {
+        
         public Danhchosinhvien()
         {
             InitializeComponent();
         }
         function fn = new function();
+<<<<<<<< HEAD:chau/Danhchosinhvien.cs
         public string id;
         private void txbTendangnhap_KeyPress(object sender, KeyPressEventArgs e)
+========
+
+        public void txbTendangnhap_KeyPress(object sender, KeyPressEventArgs e)
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/Danhchosinhvien.cs
         {
             if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
             {
@@ -29,7 +29,12 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 }
             }
         }
+<<<<<<<< HEAD:chau/Danhchosinhvien.cs
         private void txbMatkhau_KeyPress(object sender, KeyPressEventArgs e)
+========
+
+        public void txbMatkhau_KeyPress(object sender, KeyPressEventArgs e)
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/Danhchosinhvien.cs
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -44,7 +49,12 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 }
             }
         }
+<<<<<<<< HEAD:chau/Danhchosinhvien.cs
         private void btnDangnhap_Click(object sender, EventArgs e)
+========
+
+        public void btnDangnhap_Click(object sender, EventArgs e)
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/Danhchosinhvien.cs
         {
             if (string.IsNullOrWhiteSpace(txbTendangnhap.Text) || string.IsNullOrWhiteSpace(txbMatkhau.Text))
             {
@@ -60,7 +70,7 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
         }
         // Hàm riêng, dùng để add vào function.cs
         // 01
-        private void CheckLogin()
+        public void CheckLogin()
         {
             string name = txbTendangnhap.Text; //mssv
             string password = txbMatkhau.Text;
@@ -94,11 +104,12 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 Console.WriteLine(ex.Message);
             }
         }
-        private ToolTip tt = new ToolTip();
-        private void label2_MouseHover(object sender, EventArgs e)
+        public ToolTip tt = new ToolTip();
+        public void label2_MouseHover(object sender, EventArgs e)
         {
             tt.Show("Hãy nhập mã số sinh viên và mật khẩu được gửi về trong hộp thư đến của bạn!", label2);
         }
+<<<<<<<< HEAD:chau/Danhchosinhvien.cs
         private void label2_MouseLeave(object sender, EventArgs e)
         {
             tt.Hide(label2);
@@ -111,5 +122,71 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
         {
             tt.Hide(label1);
         } 
+========
+
+        public void label2_MouseLeave(object sender, EventArgs e)
+        {
+            tt.Hide(label2);
+        }
+
+        public void label1_MouseHover(object sender, EventArgs e)
+        {
+            tt.Show("Liên hệ trường bạn nhé!", label1);
+        }
+        
+        public void label1_MouseLeave(object sender, EventArgs e)
+        {
+            tt.Hide(label1);
+        }
+
+        public void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void checkpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkpass.Checked)
+            {
+                txbMatkhau.PasswordChar = '\0'; // Hiện mật khẩu
+            }
+            else
+            {
+                txbMatkhau.PasswordChar = '*'; // Ẩn mật khẩu
+            }
+        }
+
+        public void txbTendangnhap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+         
+
+        public void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void btnBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void btnBack_Click_1(object sender, EventArgs e)
+        {
+            Choosen choosen = new Choosen();
+            fn.backtochoosen(this, choosen);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            fn.close();
+        }
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/Danhchosinhvien.cs
     }
 }

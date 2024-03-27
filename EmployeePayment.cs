@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChuongTrinhQuanLyKyTuXa_Version3
@@ -53,12 +48,14 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                     txtDesignation.Text = ds.Tables[0].Rows[0][2].ToString();
 
                     setDataGrid(Int64.Parse(txtMobile.Text));
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Hồ sơ này không tồn tại", "Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clearAll();
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại!", "Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -81,7 +78,8 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                     query = "insert into employeeSalary values(" + mobile + ", '" + month + "', " + amount + ")";
                     fn.setData(query, "Lương tháng " + monthDateTime.Text + " Đã trã là " + amount);
                     setDataGrid(mobile);
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Khoản thanh toán của " + monthDateTime.Text + " Đã thanh toán.", "Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
