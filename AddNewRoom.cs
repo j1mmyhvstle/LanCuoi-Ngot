@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChuongTrinhQuanLyKyTuXa_Version3
@@ -48,7 +43,8 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 if (checkBox1.Checked)
                 {
                     status = "Yes";
-                } else
+                }
+                else
                 {
                     status = "No";
                 }
@@ -56,7 +52,8 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 query = "insert into rooms (roomNo, roomStatus) values (" + txtRoomNo1.Text + ",'" + status + "')";
                 fn.setData(query, "Đã thêm phòng.");
                 AddNewRoom_Load(this, null);
-            } else
+            }
+            else
             {
                 labelRoomExist.Text = "Phòng đã có";
                 labelRoomExist.Visible = true;
@@ -73,15 +70,17 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 labelRoom.Text = "Phòng này không tôn tại";
                 labelRoom.Visible = true;
                 checkBox2.Checked = false;
-            } else
+            }
+            else
             {
                 labelRoom.Text = "Phòng này đã tìm thấy";
                 labelRoom.Visible = true;
-               
+
                 if (ds.Tables[0].Rows[0][1].ToString() == "Yes")
                 {
                     checkBox2.Checked = true;
-                } else
+                }
+                else
                 {
                     checkBox2.Visible = false;
                 }
@@ -94,7 +93,8 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
             if (checkBox2.Checked)
             {
                 status = "Yes";
-            } else
+            }
+            else
             {
                 status = "No";
             }
@@ -110,7 +110,8 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 query = "delete from rooms where roomNo =" + txtRoomNo2.Text + "";
                 fn.setData(query, "Đã xóa chi tiết phòng!");
                 AddNewRoom_Load(this, null);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Thử xóa lại không thấy phòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChuongTrinhQuanLyKyTuXa_Version3
@@ -69,7 +64,8 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 fn.setData(query, "Sinh viên đăng ký thành công.");
 
                 clearAll();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Vui lòng điền thông tin đầy đủ", "Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

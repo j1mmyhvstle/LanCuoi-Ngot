@@ -356,6 +356,7 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
             this.txtDesignation.Name = "txtDesignation";
             this.txtDesignation.Size = new System.Drawing.Size(495, 36);
             this.txtDesignation.TabIndex = 17;
+            this.txtDesignation.SelectedIndexChanged += new System.EventHandler(this.txtDesignation_SelectedIndexChanged);
             // 
             // btnSave
             // 

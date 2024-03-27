@@ -359,7 +359,11 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::ChuongTrinhQuanLyKyTuXa_Version3.Properties.Resources.maxresdefault;
+<<<<<<<< HEAD:chau/Dashboard.Designer.cs
             this.ClientSize = new System.Drawing.Size(1280, 717);
+========
+            this.ClientSize = new System.Drawing.Size(1280, 645);
+>>>>>>>> c0d778f3d6be055a4a72834bfa5977100aff1032:son/ChuongTrinhQuanLyKyTuXa_Version3/Dashboard.Designer.cs
             this.Controls.Add(this.btnExist);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnLeavedEmployee);

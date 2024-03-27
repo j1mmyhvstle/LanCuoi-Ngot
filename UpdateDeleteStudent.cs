@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChuongTrinhQuanLyKyTuXa_Version3
@@ -62,7 +57,8 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 txtIdproof.Text = ds.Tables[0].Rows[0][8].ToString();
                 txtRoomNo.Text = ds.Tables[0].Rows[0][9].ToString();
                 comboxLiving.Text = ds.Tables[0].Rows[0][10].ToString();
-            } else
+            }
+            else
             {
                 clearAll();
                 MessageBox.Show("Số điện thoài này không tồn tại!", "Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -100,7 +96,7 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 fn.setData(query, "Đã xóa hồ sơ sinh viên");
                 clearAll();
             }
-    
+
         }
 
         private void txtMobile_TextChanged(object sender, EventArgs e)

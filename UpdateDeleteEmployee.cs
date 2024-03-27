@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChuongTrinhQuanLyKyTuXa_Version3
@@ -45,7 +40,8 @@ namespace ChuongTrinhQuanLyKyTuXa_Version3
                 txtUniqueID.Text = ds.Tables[0].Rows[0][7].ToString();
                 txtDesignation.Text = ds.Tables[0].Rows[0][8].ToString();
                 txtWorking.Text = ds.Tables[0].Rows[0][9].ToString();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Hồ sơ này không tồn tại", "Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clearAll();
